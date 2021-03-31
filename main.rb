@@ -22,5 +22,5 @@ end
 #p list_of_sides[0].roll
 
 game = Game.new(list_of_sides)
-game.print_each_die
-game.print_overall_values
+puts game.print_each_die
+puts game.print_overall_total

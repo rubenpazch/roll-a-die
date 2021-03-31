@@ -5,14 +5,22 @@ class Game
   end
 
   def print_each_die
+    result = ''
+    counter = 1
     @list_of_sides.each do |item|
       current_value = item.roll.to_i
-      puts current_value
       @overall_total += current_value
+      result += "Dice #{counter} with #{item.total_sides} sides => #{current_value} \n"
+      counter += 1
     end
+    result
   end
 
-  def print_overall_values
-    puts @overall_total
+  def overall_total_values
+    @overall_total.to_i
+  end
+
+  def print_overall_total
+    "Overall Total  #{@overall_total}"
   end
 end
