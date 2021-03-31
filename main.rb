@@ -1,6 +1,6 @@
-require_relative 'Player'
-require_relative 'Dice'
-require_relative 'Game'
+require_relative 'lib/player'
+require_relative 'lib/dice'
+require_relative 'lib/game'
 
 #puts 'Enter your name: '
 #name = gets.chomp
