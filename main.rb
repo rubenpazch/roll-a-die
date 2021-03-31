@@ -2,10 +2,25 @@ require_relative 'lib/player'
 require_relative 'lib/dice'
 require_relative 'lib/game'
 
-#puts 'Enter your name: '
-#name = gets.chomp
+print 'Type your name: '
+def get_input
+  input_value=gets.chomp
+  if input_value.empty?
+    puts "you didn't type anything"
+    false
+  else
+    print "Welcome #{input_value.downcase} \n"
+    input_value.downcase!
+    p1 = Player.new(input_value.upcase)
+  end
+end
 
-#p1 = Player.new(name)
+result = 0
+until input = get_input
+  result += 1
+end
+
+
 
 puts 'How many dice are to be rolled: '
 total_dice = gets.chomp.to_i
